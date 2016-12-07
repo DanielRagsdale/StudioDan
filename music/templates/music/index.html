@@ -1,7 +1,17 @@
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/foundation.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'music/style.css' %}">
+
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+
+	</div>
+</nav>
+
 {% if all_albums %}
 	<ul>
 		{% for album in all_albums %}	
-		<li><a href="/music/{{album.id}}">{{album.album_title}}</a></li>
+		<li><a href="{% url 'music:detail' album.id %}">{{album.album_title}}</a></li>
 		{% endfor %}
 	</ul>
 {% else %}

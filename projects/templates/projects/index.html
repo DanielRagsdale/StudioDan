@@ -1,0 +1,7 @@
+<h1>My projects:</h1>
+
+{% for post in all_posts %}
+	<h2>{{post.title}}</h2>	
+	{{post.bodytext|safe}}
+	<br>
+{% endfor %}
