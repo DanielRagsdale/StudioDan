@@ -1,7 +1,15 @@
-<h1>My projects:</h1>
-
-{% for post in all_posts %}
-	<h2>{{post.title}}</h2>	
-	{{post.bodytext|safe}}
-	<br>
-{% endfor %}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/foundation.min.css" />
+</head>
+<body>
+	<h1>My projects:</h1>
+	
+	{% for post in all_posts %}
+		<h2>{{post.title}}</h2>	
+		{{post.bodytext|safe}}
+		<br/>
+	{% endfor %}
+</body>
+</html>

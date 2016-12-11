@@ -20,4 +20,5 @@ urlpatterns = [
     url(r'^projects/', include('projects.urls')),
     url(r'^music/', include('music.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^', include('main.urls')),
 ]

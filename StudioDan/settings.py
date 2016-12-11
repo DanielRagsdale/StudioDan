@@ -15,7 +15,6 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
@@ -25,12 +24,13 @@ SECRET_KEY = '^9m0l!01b@_3c+ek%j&%yr)g3xk02r*@27o347fx#3j(beua5p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['studiodan.io', 'localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = (
+    'main.apps.MainConfig',
     'projects.apps.ProjectsConfig',
     'music.apps.MusicConfig',
     'django.contrib.admin',
@@ -57,7 +57,7 @@ ROOT_URLCONF = 'StudioDan.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ os.path.join(BASE_DIR, 'static')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -102,3 +102,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
