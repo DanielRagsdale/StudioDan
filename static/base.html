@@ -5,21 +5,35 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>StudioDan</title>
 	<link rel="stylesheet" href="{% static "css/foundation.css" %}">
 	<link rel="stylesheet" href="{% static "css/app.css" %}">
+
+	{% block head_extra %}
+		<style>
+			.hero {
+				background: rgba(150, 150, 150, 0.5);
+				/* background: #999; */
+
+				background: url("{% static "img/hero_dan.jpg" %}") no-repeat center center;
+				background-size: cover;
+				height: 45vh;
+
+				padding: 80px 0px; 
+			}
+		</style>
+	{% endblock %}
 </head>
 <body>
 	<nav class="top-bar nav-desktop">
 		<div class="wrap">
 			<div class="top-bar-left">
-				<h4>StudioDan</h4>	
+				<a href="/"><span class="menu-item-home">Home</span></a>
 			</div>		
 			<div class="top-bar-right">
 				<ul class="menu">
-					<li><a href="#">Projects</a></li>
-					<li><a href="#">Blog</a></li>
-					<li><a href="#">About</a></li>
+					<li><a class="menu-item-away" href="{% url 'projects:index' %}">Projects</a></li>
+					<li><a class="menu-item-away" href="#">Blog</a></li>
+					<li><a class="menu-item-away" href="#">About</a></li>
 				</ul>
 			</div>
 		</div>
@@ -27,21 +41,14 @@
 
 	<!-- HERO SECTION -->
 	<section class="hero">
-		<div class="wrap">
-			<h1>Welcome to StudioDan</h1>
-			<p>Kickstarter four loko waistcoat, tumblr chambray health goth microdosing woke messenger bag.
-	   		Vegan slow-carb fixie, brooklyn jean shorts man braid four loko neutra.
-	   		Kale chips narwhal small batch, artisan messenger bag helvetica intelligentsia selvage.
-	   		Laborum sint quis, swag viral cray fanny pack quinoa sustainable prism proident sriracha magna.
-	   		Man bun lumbersexual cray, mumblecore ennui mustache pabst jean shorts humblebrag ullamco eu small batch chia.
-	   		Humblebrag cornhole VHS lyft migas.
-	   		Pug cornhole vero, polaroid voluptate disrupt veniam.</p>
-		</div>
+		{% block hero %}
+		{% endblock %}
 	</section>
 
 	<!-- MAIN CONTENT -->
 	<section class="main">
 		<div class="wrap">
+		{% block main %}
 		Food truck gluten-free freegan, occupy hexagon placeat ethical gastropub brooklyn meh polaroid.
 	   	Tofu nisi ad, tacos humblebrag aliqua banjo vinyl.
 	   	Neutra art party bespoke, coloring book tacos truffaut yr franzen tempor mustache selvage etsy.
@@ -49,6 +56,7 @@
 	   	Synth roof party excepteur narwhal, iceland locavore cold-pressed.
 	   	Est adipisicing actually nesciunt, nostrud scenester bespoke seitan sunt esse man braid dolore placeat dolor.
 	   	Echo park marfa tbh lo-fi.
+		{% endblock %}
 		</div>
 	</section>
 
@@ -56,16 +64,16 @@
 	<footer>
 		<div class="wrap row small-up-1 medium-up-3">
 			<div class="column">
-				<h4>Contact</h4>
+				<h4 class="footer-title">Contact</h4>
 				<hr>
 				<a href="#">971 295 6942</a>
-				<a href="#">DanielR@studiodan.io</a>
+				<a href="#">contact@DanielRagsdale.com</a>
 				<a href="#">17400 Brookhurst Dr, 97034</a>
 			</div>
 			<div class="column">
-				<h4>Site Map</h4>
+				<h4 class="footer-title">Site Map</h4>
 				<hr>
-				<a href="#">Projects</a>
+				<a href="{% url 'projects:index' %}">Projects</a>
 				<a href="#">Blog</a>	
 				<a href="#">About</a>	
 			</div>

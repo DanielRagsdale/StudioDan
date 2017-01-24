@@ -1,0 +1,3 @@
+#!/bin/bash
+
+scp -i "~/.ssh/auxpartykey000.pem" -r /home/dan/Development/DR_COM ubuntu@ec2-52-10-56-102.us-west-2.compute.amazonaws.com:~/

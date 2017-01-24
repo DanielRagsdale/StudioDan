@@ -1,15 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/foundation/6.2.4-rc2/foundation.min.css" />
-</head>
-<body>
-	<h1>My projects:</h1>
-	
+{% extends "base.html" %}
+
+{% load static %}
+{% load project_extras %}
+
+{% block head_extra %}
+	<title>Projects | Daniel Ragsdale</title>
+
+	<style>
+		.hero {
+			background: rgba(150, 150, 150, 0.5);
+			/* background: #999; */
+
+			background: url("{% static "img/hero_software.jpg" %}") no-repeat center center;
+			background-size: cover;
+			height: 45vh;
+
+			padding: 80px 0px; 
+		}
+	</style>
+{% endblock %}
+
+{% block hero %}
+	<div class="wrap hero-body">
+		<h1>My Projects</h1>
+		<p>Programming is much more than a job. It is a passion.
+		I've spent countless hours programming on many different projects.
+		Below is a list of projects wher I am the primary contributor. If you
+		would like to see a list of my open-source contributions, click <a>here.</a>
+		</p>
+	</div>
+{% endblock %}
+
+{% block main %}
 	{% for post in all_posts %}
 		<h2>{{post.title}}</h2>	
-		{{post.bodytext|safe}}
+		{% md_render post.bodytext %}
 		<br/>
 	{% endfor %}
-</body>
-</html>
+{% endblock %}

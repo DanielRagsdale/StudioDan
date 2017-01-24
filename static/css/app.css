@@ -1,3 +1,9 @@
+
+body {
+	background: #faebd7;
+	overflow-y: scroll;
+}
+
 /* ---------------------------------------  
  * General
  * --------------------------------------- */
@@ -11,13 +17,31 @@
  * Nav
  * --------------------------------------- */
 
+.top-bar ul {
+	background-color: #222;
+}
+
+.nav-desktop {
+	background-color: #222;
+}
+
+.menu-item-home {
+	color: rgba(253, 245, 230, 0.5);
+	font-size: 2em;
+}
+
+.menu-item-away {
+	color: rgba(253, 245, 230, 0.5);
+	background-color: #222;
+}
+
 /* ---------------------------------------
  * Hero
  * --------------------------------------- */
 
-.hero {
-	background-color: #999;
-	padding: 80px 0px; 
+.hero-body {
+	width: 40%;
+	margin-left: 17%;
 }
 
 /* ---------------------------------------
@@ -25,8 +49,9 @@
  * --------------------------------------- */
 
 .main {
-	min-height: 40%;	
+	min-height: 38%;	
 	padding: 80px 0px;
+	background: rgba(0,0,0,0);
 }
 
 /* ---------------------------------------
@@ -39,4 +64,15 @@ footer {
 
 footer a {
 	display: block;
+	color: rgba(253, 245, 230, 0.5);
 }
+
+footer hr {
+	color: #fdf5e6;
+}
+
+.footer-title {
+	color: rgba(253, 245, 230, 0.5);
+}	
+
+
