@@ -24,7 +24,7 @@ SECRET_KEY = '^9m0l!01b@_3c+ek%j&%yr)g3xk02r*@27o347fx#3j(beua5p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['danielragsdale.com','studiodan.io', 'localhost', '10.0.2.2']
+ALLOWED_HOSTS = ['danielragsdale.com','.danielragsdale.com','studiodan.io', 'localhost', '10.0.2.2']
 
 
 # Application definition

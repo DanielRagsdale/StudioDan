@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load static %}
+{% load project_extras %}
 
 {% block head_extra %}
 	<title>Daniel Ragsdale</title>
@@ -29,7 +30,7 @@
 {% block main %}
 	{% for post in all_posts %}
 		<h2>{{post.title}}</h2>	
-		{{post.bodytext|safe}}
+		{% md_render post.bodytext %}
 		<br/>
 	{% endfor %}
 {% endblock %}

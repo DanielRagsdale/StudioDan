@@ -16,7 +16,7 @@ class ProjectPost(models.Model):
     class Meta:
         verbose_name = ('post')
         verbose_name_plural = ('posts')
-        ordering = ['-post_date']
+        ordering = ['-modified_date']
 
     def __str__(self):
         return self.title

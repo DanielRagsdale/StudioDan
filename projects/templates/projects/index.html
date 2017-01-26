@@ -23,18 +23,21 @@
 {% block hero %}
 	<div class="wrap hero-body">
 		<h1>My Projects</h1>
-		<p>Programming is much more than a job. It is a passion.
-		I've spent countless hours programming on many different projects.
-		Below is a list of projects wher I am the primary contributor. If you
-		would like to see a list of my open-source contributions, click <a>here.</a>
-		</p>
+		<p>Programming is much more than a job. It is a passion.</p>
 	</div>
 {% endblock %}
 
 {% block main %}
+	<p>I've spent countless hours programming on many different projects.
+	Below is a list of projects where I am the primary contributor. If you
+	would like to see a list of my open-source contributions, click <a>here.</a></p>
+	
+	<ul class="no-bullet">
 	{% for post in all_posts %}
-		<h2>{{post.title}}</h2>	
+	<li class="indented">
+		<h3>{{post.title}}</h3>	
 		{% md_render post.bodytext %}
-		<br/>
+	</li>
 	{% endfor %}
+	</ul>
 {% endblock %}
