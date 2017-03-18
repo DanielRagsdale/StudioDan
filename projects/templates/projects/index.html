@@ -30,14 +30,12 @@
 {% block main %}
 	<p>I've spent countless hours programming on many different projects.
 	Below is a list of projects where I am the primary contributor. If you
-	would like to see a list of my open-source contributions, click <a>here.</a></p>
+  	would like check out my GitHub, click <a href="https://github.com/DanielRagsdale">here.</a></p>
 	
-	<ul class="no-bullet">
+	<hr>	
 	{% for post in all_posts %}
-	<li class="indented">
-		<h3>{{post.title}}</h3>	
-		{% md_render post.bodytext %}
-	</li>
+		<a href="{% url 'projects:detail' post.slug %}"><h3 class="body-text"><u>{{post.title}}</u></h3></a>
+		{% md_render_short post.bodytext %}
 	{% endfor %}
-	</ul>
 {% endblock %}
+

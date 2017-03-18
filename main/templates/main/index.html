@@ -29,8 +29,8 @@
 
 {% block main %}
 	{% for post in all_posts %}
-		<h2>{{post.title}}</h2>	
-		{% md_render post.bodytext %}
+		<a href="{% url 'projects:detail' post.slug %}"><h2 class="body-text"><u>{{post.title}}</u></h2></a>
+		{% md_render_short post.bodytext %}
 		<br/>
 	{% endfor %}
 {% endblock %}

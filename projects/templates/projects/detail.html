@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% load project_extras %}
+
+{% block head_extra %}
+	<title>Projects | Daniel Ragsdale</title>
+
+	<style>
+		.hero {
+			background: #999;
+			color: #222;
+			/* background: #999; */
+
+			/* background: url("{% static "img/hero_software.jpg" %}") no-repeat center center; */
+
+			padding: 2px 0px;
+		}
+	</style>
+{% endblock %}
+
+{% block hero %}
+	<div class="wrap">
+		<h1 style="margin-left: 5%" class="body-text">{{post.title}}</h1>	
+	</div>
+{% endblock %}
+
+{% block main %}
+	<div class="body-text">		
+	{% md_render post.bodytext %}
+	</p>
+{% endblock %}

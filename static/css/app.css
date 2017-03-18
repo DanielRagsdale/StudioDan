@@ -26,12 +26,12 @@ body {
 }
 
 .menu-item-home {
-	color: rgba(253, 245, 230, 0.5);
+	color: #999;
 	font-size: 2em;
 }
 
 .menu-item-away {
-	color: rgba(253, 245, 230, 0.5);
+	color: #999;
 	background-color: #222;
 }
 
@@ -58,6 +58,10 @@ body {
 	padding-left: 4em;	
 }
 
+.body-text {
+	color: #222;
+}
+
 /* ---------------------------------------
  * Footer
  * --------------------------------------- */
@@ -68,7 +72,7 @@ footer {
 
 footer a {
 	display: block;
-	color: rgba(253, 245, 230, 0.5);
+	color: #999;
 }
 
 footer hr {
@@ -76,7 +80,7 @@ footer hr {
 }
 
 .footer-title {
-	color: rgba(253, 245, 230, 0.5);
+	color: #999;
 }	
 
 
