@@ -6,5 +6,5 @@ app_name = 'projects'
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^(?P<project_slug>[\w]+)\/?$', views.detail, name='detail'),
+    url(r'^(?i)(?P<project_slug>[\w]+)\/?$', views.detail, name='detail'),
 ]

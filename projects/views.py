@@ -12,7 +12,7 @@ def index(request):
     return render(request, 'projects/index.html', context) 
 
 def detail(request, project_slug):
-    post = ProjectPost.objects.get(slug=project_slug)
+    post = ProjectPost.objects.get(slug=project_slug.lower())
     
     context = {
         'post' : post
